@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.26), transparent 34%),
+    radial-gradient(circle at top right, rgba(236, 72, 153, 0.22), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.18), transparent 34%),
+    #faf7ff;
+  color: #1e1b4b;
+}
+
+.luxury-dark {
+  background: linear-gradient(135deg, #160033, #3b0764, #831843);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.premium-shadow {
+  box-shadow: 0 24px 80px rgba(88, 28, 135, 0.18);
+}
+
+.med-gradient {
+  background: linear-gradient(135deg, #7c3aed, #9333ea, #ec4899);
+}
+
+.input-luxury {
+  width: 100%;
+  border: 1px solid #e9d5ff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  outline: none;
+  transition: 0.25s ease;
+  background: white;
+  color: #1e1b4b;
+}
+
+.input-luxury:focus {
+  border-color: #9333ea;
+  box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.16);
+}
+
+.btn-luxury {
+  background: linear-gradient(135deg, #7c3aed, #9333ea, #ec4899);
+  color: white;
+  border-radius: 16px;
+  padding: 12px 22px;
+  font-weight: 800;
+  transition: 0.25s ease;
+  box-shadow: 0 14px 30px rgba(147, 51, 234, 0.32);
+}
+
+.btn-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(236, 72, 153, 0.42);
+}
+
+.text-teal-300 {
+  color: #f0abfc !important;
+}
+
+.text-teal-600 {
+  color: #9333ea !important;
+}
+
+.text-teal-700 {
+  color: #7e22ce !important;
+}
+
+.bg-teal-500 {
+  background-color: #9333ea !important;
+}
+
+.bg-teal-600 {
+  background-color: #7e22ce !important;
+}
+
+.bg-teal-100 {
+  background-color: #f3e8ff !important;
+}
+
+.hover\:text-teal-300:hover {
+  color: #f0abfc !important;
+}
+
+.hover\:text-teal-700:hover {
+  color: #7e22ce !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5e8ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  border-radius: 10px;
+}

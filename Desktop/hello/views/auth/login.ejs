@@ -1,0 +1,57 @@
+<div class="min-h-[75vh] flex items-center justify-center">
+
+  <div class="max-w-md w-full glass-card premium-shadow p-10 rounded-[32px]">
+
+    <h1 class="text-4xl font-black text-center mb-3 text-gray-900">
+      Welcome Back
+    </h1>
+
+    <p class="text-center text-gray-500 mb-8">
+      Login to access MediCare Hub.
+    </p>
+
+    <form action="/login" method="POST">
+
+      <div class="mb-5">
+        <label class="block mb-2 font-bold text-gray-700">
+          Username
+        </label>
+
+        <input
+          type="text"
+          name="username"
+          required
+          class="input-luxury"
+        />
+      </div>
+
+      <div class="mb-6">
+        <label class="block mb-2 font-bold text-gray-700">
+          Password
+        </label>
+
+        <input
+          type="password"
+          name="password"
+          required
+          class="input-luxury"
+        />
+      </div>
+
+      <button class="btn-luxury w-full">
+        Login
+      </button>
+
+    </form>
+
+    <p class="text-center text-gray-500 mt-8">
+      Don’t have an account?
+
+      <a href="/register" class="text-teal-600 font-black hover:text-teal-700">
+        Register Now
+      </a>
+    </p>
+
+  </div>
+
+</div>

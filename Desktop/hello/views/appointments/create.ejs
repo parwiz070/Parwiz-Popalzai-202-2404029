@@ -1,0 +1,59 @@
+<div class="max-w-3xl mx-auto glass-card premium-shadow p-10 rounded-[32px]">
+
+  <h1 class="text-4xl font-black mb-3 text-gray-900">
+    Add Appointment
+  </h1>
+
+  <p class="text-gray-500 mb-8">
+    Create a new clinic appointment record.
+  </p>
+
+  <form action="/appointments" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Patient Name</label>
+      <input type="text" name="patientName" required class="input-luxury" />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Doctor Name</label>
+      <input type="text" name="doctorName" required class="input-luxury" />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Department</label>
+      <input type="text" name="department" required placeholder="Cardiology, Dental, General..." class="input-luxury" />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Status</label>
+      <select name="status" class="input-luxury">
+        <option value="Pending">Pending</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Completed">Completed</option>
+        <option value="Cancelled">Cancelled</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Date</label>
+      <input type="date" name="appointmentDate" required class="input-luxury" />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Time</label>
+      <input type="time" name="appointmentTime" required class="input-luxury" />
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="block mb-2 font-bold text-gray-700">Notes</label>
+      <textarea name="notes" rows="5" class="input-luxury"></textarea>
+    </div>
+
+    <button class="btn-luxury md:col-span-2">
+      Save Appointment
+    </button>
+
+  </form>
+
+</div>

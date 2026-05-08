@@ -1,0 +1,59 @@
+<div class="max-w-3xl mx-auto glass-card premium-shadow p-10 rounded-[32px]">
+
+  <h1 class="text-4xl font-black mb-3 text-gray-900">
+    Edit Appointment
+  </h1>
+
+  <p class="text-gray-500 mb-8">
+    Update appointment details.
+  </p>
+
+  <form action="/appointments/<%= appointment._id %>?_method=PUT" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Patient Name</label>
+      <input type="text" name="patientName" value="<%= appointment.patientName %>" required class="input-luxury" />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Doctor Name</label>
+      <input type="text" name="doctorName" value="<%= appointment.doctorName %>" required class="input-luxury" />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Department</label>
+      <input type="text" name="department" value="<%= appointment.department %>" required class="input-luxury" />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Status</label>
+      <select name="status" class="input-luxury">
+        <option value="Pending" <%= appointment.status === 'Pending' ? 'selected' : '' %>>Pending</option>
+        <option value="Confirmed" <%= appointment.status === 'Confirmed' ? 'selected' : '' %>>Confirmed</option>
+        <option value="Completed" <%= appointment.status === 'Completed' ? 'selected' : '' %>>Completed</option>
+        <option value="Cancelled" <%= appointment.status === 'Cancelled' ? 'selected' : '' %>>Cancelled</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Date</label>
+      <input type="date" name="appointmentDate" value="<%= appointment.appointmentDate %>" required class="input-luxury" />
+    </div>
+
+    <div>
+      <label class="block mb-2 font-bold text-gray-700">Time</label>
+      <input type="time" name="appointmentTime" value="<%= appointment.appointmentTime %>" required class="input-luxury" />
+    </div>
+
+    <div class="md:col-span-2">
+      <label class="block mb-2 font-bold text-gray-700">Notes</label>
+      <textarea name="notes" rows="5" class="input-luxury"><%= appointment.notes %></textarea>
+    </div>
+
+    <button class="btn-luxury md:col-span-2">
+      Update Appointment
+    </button>
+
+  </form>
+
+</div>

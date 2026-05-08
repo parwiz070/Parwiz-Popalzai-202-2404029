@@ -1,0 +1,72 @@
+<div class="max-w-4xl mx-auto glass-card premium-shadow rounded-[32px] p-10">
+
+  <div class="flex flex-col md:flex-row justify-between gap-6">
+
+    <div>
+      <p class="text-teal-600 font-black uppercase tracking-[0.25em] text-sm">
+        Appointment Details
+      </p>
+
+      <h1 class="text-5xl font-black text-gray-900 mt-3">
+        <%= appointment.patientName %>
+      </h1>
+
+      <p class="text-gray-500 mt-3 text-lg">
+        Assigned to Dr. <%= appointment.doctorName %>
+      </p>
+    </div>
+
+    <span class="self-start px-5 py-3 rounded-full bg-teal-100 text-teal-700 font-black">
+      <%= appointment.status %>
+    </span>
+
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+
+    <div class="bg-white rounded-3xl p-6 shadow">
+      <p class="text-gray-400 font-bold">Department</p>
+      <h3 class="text-xl font-black mt-2"><%= appointment.department %></h3>
+    </div>
+
+    <div class="bg-white rounded-3xl p-6 shadow">
+      <p class="text-gray-400 font-bold">Date</p>
+      <h3 class="text-xl font-black mt-2"><%= appointment.appointmentDate %></h3>
+    </div>
+
+    <div class="bg-white rounded-3xl p-6 shadow">
+      <p class="text-gray-400 font-bold">Time</p>
+      <h3 class="text-xl font-black mt-2"><%= appointment.appointmentTime %></h3>
+    </div>
+
+  </div>
+
+  <div class="bg-white rounded-3xl p-6 shadow mt-8">
+
+    <p class="text-gray-400 font-bold">Notes</p>
+
+    <p class="text-gray-700 mt-3 leading-relaxed">
+      <%= appointment.notes || 'No notes added.' %>
+    </p>
+
+  </div>
+
+  <div class="flex gap-4 mt-10">
+
+    <a href="/appointments/edit/<%= appointment._id %>" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-2xl font-black">
+      Edit
+    </a>
+
+    <form action="/appointments/<%= appointment._id %>?_method=DELETE" method="POST">
+      <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-2xl font-black">
+        Delete
+      </button>
+    </form>
+
+    <a href="/dashboard" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-2xl font-black">
+      Back
+    </a>
+
+  </div>
+
+</div>
